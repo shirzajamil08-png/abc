@@ -71,7 +71,8 @@ const App = () => {
       tagone: "BRANDING",
       tagtwo: "IDENTITY",
       year: 2024,
-      filter: "creative"
+      filter: "creative",
+      link: "abc-omega-swart.vercel.app",
     },
     {
       id: 2,
@@ -523,7 +524,7 @@ const App = () => {
           </ul>
           <div className="filter-container">
             {filter.map((item) => (
-              <div key={item.id} className="portfolio-card">
+              <div key={item.id} className="portfolio-card" onClick={() => window.open(item.link, "_blank")}>
                 <div className="image-container">
                   <img src={item.img} alt="" />
                   <div className="portfolio-overlay">
